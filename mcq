@@ -521,36 +521,36 @@ We have to be careful to avoid cycles.
 A graph has exponentially many paths.
 Edges may be directed.
 
-Correct answer: (c) A graph has exponentially many paths.
+Correct answer: (c) A graph has exponentially many paths
 
-Graphs have exponentially many paths, so the LP model will have exponentially many variables.
-1 point
+3)
 Suppose we compute the maximum s-t flow F in a network. Then, which of the following is true of s-t cuts?
+
 From F, we can identify a minimum s-t cut in polynomial time.
 From F, we can identify all minimum s-t cuts in polynomial time.
 From F, we know the capacity of the minimum s-t cut, but identifying such a cut can take exponential time.
 F gives a lower bound for the capacity of the minimum s-t cut but not the exact capacity.
+
 Correct answer: (a) From F, we can identify a minimum s-t cut in polynomial time.
-From F, use BFS to identify saturated edges that form a min-cut. There may be other min-cuts.
-1 point
-We have an exponential time algorithm for problem A, and problem A reduces in polynomial time to problem B. From this we can
 
 
+4)
+We have an exponential time algorithm for problem A, and problem A reduces in polynomial time to problem B. From this we canconclude that:
 
-
-
-conclude that:
 B has an exponential time algorithm.
 B cannot have a polynomial time algorithm.
 A cannot have a polynomial time algorithm.
 None of the above.
+
 Correct answer: (d) None of the above
-A reduction can transfer a positive propoerty from B to A or a negative property from A to B.
-1 point
+
+5)
 Suppose SAT reduces to a problem C. To claim that C is NP-complete, we additionally need to show that:
 There is a checking algorithm for C.
+
 Every instance of C maps to an instance of SAT.
 Every instance of SAT maps to an instance of C.
 C does not have an efficient algorithm.
 Correct answer: (a) There is a checking algorithm for C.
+
 The reduction establishes NP-hardness. We have to show that C is in NP, for which a checking algorithm suffices.
