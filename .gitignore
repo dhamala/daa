@@ -1,0 +1,515 @@
+1)
+In the code fragment below, first and last are integer values and composite(x) is a function that returns true if x is not a prime
+number and false otherwise.
+i := 0; j := 0; k := 0;
+for (m := last; m >= first; m := m-1){
+k := k + m;
+if (composite(m)){
+i := i + m;
+}else{
+j := j + m;
+}
+}
+At the end of the loop:
+
+k < i+j
+k = i+j
+k > i+j
+The relationship between i, j and k depends on the values of first and last
+
+Correct answer: (b) k = i+j
+
+
+
+
+
+
+2)
+How many times is the comparison i >= n performed in the following program?
+int i = 200, n = 110;
+main(){
+while (i >= n){
+i = i-1;
+n = n+1;
+}
+}
+
+45
+46
+47
+90
+
+Correct answer: (c) 47
+
+
+
+
+
+
+3)
+An algorithm has two phases. The first phase, initialization, takes time O(n2 log n). The second phase, which is the main computation,
+takes time O(n3). What is the most accurate description of the complexity of the overall algorithm?
+
+O(n2 log n)
+O(n3)
+O(n3 log n)
+O(n3 + log n)
+
+Correct answer: (b) O(n3)
+
+
+
+
+4)
+Let f(n) = 560n4 + 3651n3 + 3n+107 and g(n) = 3n4 + 15n2. Which of the following is true?
+
+f(n) is O(g(n)), but g(n) is not O(f(n))
+g(n) is O(f(n)), but f(n) is not O(g(n))
+f(n) is not O(g(n)) and g(n) is not O(f(n))
+f(n) is O(g(n)) and g(n) is O(f(n))
+
+Correct answer: (d) f(n) is O(g(n)) and g(n) is O(f(n))
+
+
+
+4)
+if T(n) = n2 √ n then
+
+T(n) = O(n2)
+T(n) = O(n2 log n)
+T(n) = O(n3)
+None of the above
+
+Correct answer: (c) T(n) = O(n3)
+
+
+
+
+Week 2 Quiz Solutions
+
+1)
+Assume that a CPU can process 108 operations per second. Suppose you have to sort an array with 106 elements. Which of the
+following is true?
+
+Selection sort will always take more than 2.5 hours while merge sort will always take less than 1 second.
+Insertion sort will always take more than 2.5 hours while quicksort will always take less than 1 second
+Insertion sort could take more than 2.5 hours while merge sort will always take less than 1 second.
+Selection sort could take more than 2.5 hours while quicksort will always take less than 1 second.
+
+Correct Answer: (c) Insertion sort could take more than 2.5 hours while merge sort will always take less than 1 second.
+
+
+2)
+Suppose our aim is to sort an array in ascending order. Which of the following statements is true?
+
+Input in ascending order is worst case for both selection sort and insertion sort.
+Input in descending order is worst case for both selection sort and insertion sort.
+Input in ascending order is worst case for insertion sort but not for selection sort.
+Input in descending order is worst case for selection sort but not for insertion sort.
+
+Correct Answer: (b) Input in descending order is worst case for both selection sort and insertion sort.
+
+
+
+
+3)
+Suppose we want to sort an array in ascending order and we implement quicksort so that we always choose the last element in the
+array as the pivot element. Assume that the input is a permutation of {1, 2, …, n}. Which of the following would definitely be a worst
+case permutation of this input for this implementation of quicksort?
+
+{1, 2,…, n} with all even numbers in random order followed by all odd numbers in random order.
+{1, 2, . . . , n} in ascending order.
+{1,2,...,n} in some random order.
+{1, 2, . . . , n} with all odd numbers in ascending order followed by all even numbers in random order.
+
+Correct Answer: (b) {1, 2, … , n} in ascending order.
+
+
+
+4)
+Which of the following statements is not true?
+
+For every fixed strategy to choose a pivot for quicksort, we can construct a worst case input that requires time O(n2).
+If we randomly choose a pivot element each time, quicksort will always terminate in time O(n log n).
+If we could find the median in time O(n), quicksort would have worst case complexity O(n log n).
+Quicksort and merge sort are both examples of divide and conquer algorithms.
+
+Correct Answer: (b) If we randomly choose a pivot element each time, quicksort will always terminate in time O(n log n).
+
+
+5)
+We have a list of pairs [("Tariq",71),("Brinda",85),("Shweta",71),("Sunita",85),("Salma",72),("Uday",60)], where each pair consists of a
+student's name and his/her marks in a course. We sort these pairs in ascending order of marks. Which of the folllowing corresponds to a
+stable sort of this input?
+
+[("Uday",60),("Tariq",71),("Shweta",71),("Salma",72),("Brinda",85),("Sunita",85)]
+[("Brinda",85),("Salma",72),("Shweta",71),("Sunita",85)("Tariq",71),("Uday",60)]
+[("Uday",60),("Shweta",71),("Tariq",71),("Salma",72),("Brinda",85),("Sunita",85)]
+[("Uday",60),("Tariq",71),("Shweta",71),("Salma",72),("Sunita",85),("Brinda",85)]
+
+Correct Answer: (a) [("Uday",60),("Tariq",71),("Shweta",71),("Salma",72),("Brinda",85),("Sunita",85)].
+
+
+
+Week 3 Quiz Solutions
+
+
+1)
+An undirected graph G has 128 nodes and there is a path from every vertex to every other vertex in G. Suppose v1 and v2 are two
+vertices in G. Then, what can we say about the shortest path from v1 to v2?
+
+The path has at most 2 edges.
+The path has at most 63 edges.
+The path has at most 127 edges.
+None of the above.
+
+Correct Answer: (c) The path has at most 127 edges.
+
+
+2)
+An undirected graph G has 96 edges. The degree of a vertex v, deg(v), is the number of edges connected to v. Suppose V =
+{v1,v2,...,v30}. What is the value of deg(v1)+ deg(v
+
+96
+192
+288
+384
+
+Correct Answer: (b) 192
+
+
+3)
+Which of the following is not true of depth-first search (DFS) starting at a vertex v?
+
+DFS identifies all vertices reachable from v.
+Using an adjacency list instead of an adjacency matrix can improve the worst case complexity.
+DFS will identify the shortest paths from v in any graph without edge weights.
+DFS numbering can be used to identify cycles in the graph.
+
+Correct Answer: (c) DFS will identify the shortest paths from v in any graph without edge weights.
+
+
+
+4)
+How many topological orderings does the following directed acyclic graph have?
+
+8
+12
+16
+20
+
+Correct Answer: (b) 12.
+
+
+
+5)
+
+Lavanya has to complete 12 courses for her degree. There are six compulsory courses: Basic and Advanced Mathematics,
+Basic and Advanced Physics and Basic and Advanced Ele
+course takes one semester to complete. There are some constraints because of prerequisites.
+ For Mathematics, Physics and Electronics, the Basic course must be completed before starting the Advan
+ Advanced Physics must be completed before starting Basic Electronics.
+−)+ v2) + · · · + deg(v30)?
+h Electronics. She also has to complete six Optional Courses. Each
+Advanced course.
+ctronics. ced
+ Advanced Mathematics must be completed before starting Advanced Physics.
+ The Optional Courses can be done in any order, but no more than two Optional Courses can be taken in a semester.
+
+
+Given these constraints, what is the minimum number of semesters that Lavanya needs to complete her course requirements.
+3
+4
+5
+6
+
+Correct Answer: (c) 5
+
+
+
+
+Week 4 Quiz Solution
+
+1)
+Consider the following fragment of code for a graph algorithm on an undirected graph.
+for each vertex i in V
+mark i as visited
+for each edge (j,i) pointing into i
+update weight(j,i) to weight(j,i) + k
+Which of the following is the most accurate description of the complexity of this fragment. (Recall that n is the number of vertices, m is
+the number of edges.)
+
+O(n)
+O(nm)
+O(n+m)
+O(m)
+
+Correct Answer: (c) O(n+m)
+
+
+2)
+Consider the following strategy to solve the single source shortest path problem with edge weights from source s.
+1. Replace each edge with weight w by w edges of weight 1 connected by new intermediate nodes
+2. Run BFS(s) on the modified graph to find the shortest path to each of the original vertices in the graph.
+Which of the following statements is correct?
+
+This strategy will solve the problem correctly but is not as efficient as Dijkstra's algorithm.
+This strategy will solve the problem correctly and is as efficient as Dijkstra's algorithm.s st
+This strategy will not solve the problem correctly.
+This strategy will only work if the graph is acyclic.
+
+Correct Answer: (a) This strategy will solve the problem correctly but is not as efficient as Dijkstra's algorithm.
+
+
+3)
+Consider the following strategy to convert a graph with negative edge weights to one that does not have negative edge weights. Let the
+maximum magnitude negative edge weight in the graph be -k. Then, for each edge in the graph with weight w, update the weight to
+w+k+1. Consider the following claim:
+ To solve the shortest path problem in the original graph, we can run Dijkstra's algorithm on the modified graph and subtract the added
+weights to get the original distances.
+Which of the following is not correct.
+
+The claim is not true in general.
+The claim is true for all graphs.
+The claim is true for connected acyclic graphs.
+The claim is not true in general for connected graphs with cycles.
+
+Correct Answer: (b) The claim is true for all graphs.
+
+
+4)
+Consider the following algorithm on a graph with edge weights.
+ Sort the edges as [e1,e2,...,em] in decreasing order of cost.
+ Start with the original graph. Consider each edge ej. If this edge is part of a cycle delete it.
+Which of the following is not true.
+
+After processing all m edges, the resulting graph is connected.
+What remains at the end is a minimum cost spanning tree.
+Exactly m-n+1 edges will be deleted.
+At most n-1 edges will be deleted.
+
+Correct Answer: (d) At most n-1 edges will be deleted.
+
+
+5)
+Suppose we have a graph with negative edge weights. We take the largest magnitude negative edge weight -k and reset each edge
+weight w to w+k+1. Which of the following is true?
+Kruskal's algorithm will identify the same spanning tree on the new graph as on the old graph.
+Minimum cost spanning trees in the original graph will not correspond to minimum cost spanning trees in the new graph.
+Prim's algorithm will not work on the original graph but will work on the modified graph.
+There are more minimum cost spanning trees in the modified graph than in the original graph.
+Correct Answer: (a) Kruskal's algorithm will identify the same spanning tree on the new graph as on the old graph.
+The ascending order of edge weights is unchanged if each edge weight is increased by k+1, so Kruskal's algorithm runs in exactly same
+way as before and produces the same tree. In general, since every spanning tree has exactly n-1 edges, the increase in weight
+uniformly affects all spanning trees, so the minimum cost spanning trees are unchanged. Prim's algorithm is not affected by negative
+weights.
+Week 5 Quiz Solutions
+The due date for submitting this assignment has passed.
+Due on 2017-02-27, 05:29 IST.
+Submitted assignment
+1 point
+Suppose we want to extend the union-find data structure to support the operation Reset(c), which takes as input the name of a
+component c and then breaks up c into singleton components, like MakeUnionFind(). For instance if c = 3 and c currently consists of
+{1,3,7}, then Reset(c) will produce three components called 1, 3 and 7 consisting of {1}, {3} and {7}, respectively.
+Which of the following is correct about the cost of adding Reset(c) to the array and pointer implementations of union-find discussed in
+the lecture?
+Array representation: O(n), Pointer representation: O(n)
+Array representation: O(size(c)), Pointer representation: O(n)
+Array representation: O(n), Pointer representation: O(size(c))
+Array representation: O(size(c)), Pointer representation: O(size(c))
+Correct Answer: (b) Array representation: O(size(c)), Pointer representation: O(n).
+In the array representation we have the list Members[c] which allows us to update the contents of c in time O(size(c)). In the pointer
+representation there is no easy way to identify all elements that belong to component c without scanning the entire set, so it takes time
+O(n).
+1 point
+Suppose we want to delete an arbitrary element from a max heap. (Assume we have auxiliary arrays NodeToHeap[] and HeapToNode[]
+required for the update() operation.)
+Consider the following strategies.
+ Strategy 1: Remove the element from the array, compress the array and reheapify.
+ Strategy 2: Update the value of this node to the current maximum value in the heap + 1, then delete_max.
+Strategy 1 takes time O(n log n) and Strategy 2 takes time O(n)
+Strategy 1 takes time O(n) and Strategy 2 takes time O(n log n)
+Strategy 1 takes time O(log n) and Strategy 2 takes time O(n)
+Strategy 1 takes time O(n) and Strategy 2 takes time O(log n)
+Correct Answer: (d) Strategy 1 takes time O(n) and Strategy 2 takes time O(log n).
+Compressing the array and heapify both take time O(n), so Strategy 1 takes time O(n). Look up the max value in a heap takes time
+O(1). Updating the node takes time O(log n), and so does delete_max(). So the second strategy takes time O(log n).
+1 point
+Suppose we want to support the operations predecessor and successor in a heap. Given a value v in the heap, pred(v) tells us the next
+smaller value currently in the heap and succ(v) tells us the next larger value currently in the heap.
+In both min heaps and max heaps, both operations take time O(n).
+In both min heaps and max heaps, both operations take time O(log n).
+In a min heap, pred(v) takes time O(log n) and succ(v) takes O(n) whereas in a max heap pred(v) takes time O(n) and succ(v)
+takes O(log n).
+In a min heap, pred(v) takes time O(n) and succ(v) takes O(log n) whereas in a max heap pred(v) takes time O(log n) and succ(v)
+takes O(n).
+Correct Answer: (a) In both min heaps and max heaps, both operations take time O(n).
+In either case, there is no obvious way to compute pred(v) and suc(v) without scanning all elements, so both cases take O(n).
+1 point
+Suppose we do merge sort with a three-way split: divide the array into 3 equal parts, sort each part and do a 3 way merge. What would
+the worst-case complexity of this version be?
+O(n2)
+O(n2 log3n)
+O(n log2n)
+O(n (log2n)2)
+Correct Answer: (c) O(n log2n).
+The recurrence will yield O(n log3 n), but log3 n = log2 n / log2 3 = O(log2 n).
+1 point
+In the closest pair of points problem, we have assumed that no two points have the same x or y coordinate. Which of the following steps
+would become more complicated to justify without this assumption.
+Constructing QY and RY from PY in time O(n) in the divide step.
+Constructing QX and RX from PX in time O(n) in the divide step.
+Constructing SY from QY and RY in time O(n) the combine step.
+Arguing that every d/2 side square in the d-band around the separator can have at most one point.
+Correct Answer: (a) Constructing QY and RY from PY in time O(n) in the divide step.
+All x-coordinates could be the same, in which case we may need O(n) time for each point in PY to assign it to QY or RY.
+Week 6 Quiz Solutions
+The due date for submitting this assignment has passed.
+Due on 2017-03-06, 05:29 IST.
+Submitted assignment
+1 point
+What is the complexity of inorder traversal for a binary search tree with n nodes?
+O(log n) whether the tree is balanced or unbalanced.
+O(log n) if the tree is balanced, O(n) otherwise.
+O(n) whether the tree is balanced or unbalanced.
+O(n) if the tree is balanced, O(n log n) otherwise.
+Correct answer: (c) O(n) whether the tree is balanced or unbalanced.
+Inorder traversal visits and lists each element once, so it is O(n).
+1 point
+Suppose we do not have a parent pointer in the nodes of a search tree, only left-child and right-child. Which of the following operations
+can be computed in time O(log n) for a balanced search tree?
+find, insert, delete, but not min, max, pred, succ
+find, insert, delete, min, max, but not pred, succ
+find, insert, delete, pred, succ but not min, max
+All of find, insert, delete, min, max, pred, succ
+Correct answer: (d) All of find, insert, delete, min, max, pred, succ.
+The only operations explained using the parent link were pred/succ, in the case where the node was a minimum/maximum node in its
+subtree. But we can find the appropriate ancestor by a second scan from root to this node by checking where the path takes the last
+right/left turn.
+1 point
+Consider the following algorithm to build a balanced search tree from a sorted sequence.
+ Make the mid-point of the sequence the root of the tree
+ Recursively construct balanced search trees from elements to the left and right of the midpoint and make these the left and right
+subtrees of the root.
+What is the complexity of this procedure where the sorted sequence is a sorted array?
+O(n)
+O(n log n)
+O(n2)
+Depends on the contents of the original sequence
+Correct answer: (a) O(n)
+The recursive construction has the recurrence T(n) = 2T(n/2) + O(1) since we can find the midpoint of an array in constant time.
+1 point
+Consider the following algorithm to build a balanced search tree from a sorted sequence.
+ Make the mid-point of the sequence the root of the tree
+ Recursively construct balanced search trees from elements to the left and right of the midpoint and make these the left and right
+subtrees of the root.
+What is the complexity of this procedure where the sorted sequence is a sorted list?
+O(n)
+O(n log n)
+O(n2)
+Depends on the contents of the original sequence.
+Correct answer: (b) O(n log n)
+The recursive construction has the recurrence T(n) = 2T(n/2) + O(n), like merge sort, since it takes time O(n) to find the midpoint in a
+list.
+1 point
+Which of the following is not a greedy algorithm?
+Dijkstra's algorithm for single source shortest paths
+Bellman-Ford algorithm for single source shortest paths
+Prim's algorithm for minimum cost spanning tree
+Kruskal's algorithm for minimum cost spanning tree
+Correct answer: (b) Bellman-Ford algorithm for single source shortest paths
+Bellman-Ford implicitly tests all possible paths of length upto n-1 from the source node to every other node, so it is not greedy.
+Week 7 Quiz Solutions
+The due date for submitting this assignment has passed.
+Due on 2017-03-13, 23:59 IST.
+Submitted assignment
+1 point
+We want to write down a recursive expression for Profit[i].
+ Profit[N] = 0
+ For 1 ≤ i < N, Profit[i] = ??
+max(Profit[i+1], Profit[i+2] + Price[i+1] - Price[i] - 2)
+max(Profit[i+2] + Price[i+1] - Price[i] - 2, Profit[i+3] + Price[i+2] - Price[i] - 2, ... Profit[N] + Price[n-1] - Price[i] - 2, Price[n] - Price[i] -
+2)
+max(Profit[i+1], Profit[i+2] + Price[i+1] - Price[i] - 2, Profit[i+3] + Price[i+2] - Price[i] - 2, ... Profit[N] + Price[n-1] - Price[i] - 2)
+max(Profit[i+1], Profit[i+2] + Price[i+1] - Price[i] - 2, Profit[i+3] + Price[i+2] - Price[i] - 2, ... Profit[N] + Price[n-1] - Price[i] - 2,
+Price[n] - Price[i] - 2)
+Correct answer: (d) max(Profit[i+1], Profit[i+2] + Price[i+1] - Price[i] - 2, Profit[i+3] + Price[i+2] - Price[i] - 2, ... Profit[N] +
+Price[n-1] - Price[i] - 2, Price[n] - Price[i] - 2)
+Consider all possibilities and take the maximum.
+1 point
+What is the size of the memo table for this problem?
+N
+N-1
+N+1
+N2
+Correct answer: (a) N
+One entry per day, N days.
+1 point
+What is a good order to compute the values of Profit[i] using dynamic programming?
+From Profit[1] to Profit[N]
+From Profit[N] to Profit[1]
+Either from Profit[1] to Profit[N] or from Profit[N] to Profit[1]
+None of these
+Correct answer: (b) From Profit[N] to Profit[1]
+Profit[i] depends on Profit[i+1],...,Profit[N] and Profit[N] is base case.
+1 point
+How much time will dynamic programming take to compute Profit[1]?
+O(N)
+O(N log N)
+O(N2)
+O(N2 log N)
+Correct answer: (c) O(N2)
+Profit[i] requires time O(N-i), so overall time is 1+2+...N-1
+1 point
+What is the value of Profit[1] in the example given in the problem statement?
+6
+7
+8
+9
+Correct answer: (c) 8
+Buy on day 2, sell on day 6, buy on day 7 sell on day 8
+Week 8 Quiz Solutions
+The due date for submitting this assignment has passed.
+Due on 2017-03-20, 23:59 IST.
+Submitted assignment
+1 point
+Which of the following is not a linear constraint?
+8x ≤ 3y + 25
+5x + 6xy ≤ 5
+9x ≥ 7y + 8z
+5y + 3x ≥ 33
+Correct answer: (b) 5x + 6xy ≤ 5
+In a non-linear constraint, we have two or more variables multiplied together.
+1 point
+When we model a graph problem using LP, mapping each path to a variable is not a good strategy because:
+Paths can be hard to compute.
+We have to be careful to avoid cycles.
+A graph has exponentially many paths.
+Edges may be directed.
+Correct answer: (c) A graph has exponentially many paths.
+Graphs have exponentially many paths, so the LP model will have exponentially many variables.
+1 point
+Suppose we compute the maximum s-t flow F in a network. Then, which of the following is true of s-t cuts?
+From F, we can identify a minimum s-t cut in polynomial time.
+From F, we can identify all minimum s-t cuts in polynomial time.
+From F, we know the capacity of the minimum s-t cut, but identifying such a cut can take exponential time.
+F gives a lower bound for the capacity of the minimum s-t cut but not the exact capacity.
+Correct answer: (a) From F, we can identify a minimum s-t cut in polynomial time.
+From F, use BFS to identify saturated edges that form a min-cut. There may be other min-cuts.
+1 point
+We have an exponential time algorithm for problem A, and problem A reduces in polynomial time to problem B. From this we can
+conclude that:
+B has an exponential time algorithm.
+B cannot have a polynomial time algorithm.
+A cannot have a polynomial time algorithm.
+None of the above.
+Correct answer: (d) None of the above
+A reduction can transfer a positive propoerty from B to A or a negative property from A to B.
+1 point
+Suppose SAT reduces to a problem C. To claim that C is NP-complete, we additionally need to show that:
+There is a checking algorithm for C.
+Every instance of C maps to an instance of SAT.
+Every instance of SAT maps to an instance of C.
+C does not have an efficient algorithm.
+Correct answer: (a) There is a checking algorithm for C.
+The reduction establishes NP-hardness. We have to show that C is in NP, for which a checking algorithm suffices.
