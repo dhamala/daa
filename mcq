@@ -376,124 +376,153 @@ Week 6 Quiz Solutions
 
 1)
 What is the complexity of inorder traversal for a binary search tree with n nodes?
+
 O(log n) whether the tree is balanced or unbalanced.
 O(log n) if the tree is balanced, O(n) otherwise.
 O(n) whether the tree is balanced or unbalanced.
 O(n) if the tree is balanced, O(n log n) otherwise.
+
 Correct answer: (c) O(n) whether the tree is balanced or unbalanced.
-Inorder traversal visits and lists each element once, so it is O(n).
-1 point
+
+
+2)
 Suppose we do not have a parent pointer in the nodes of a search tree, only left-child and right-child. Which of the following operations
 can be computed in time O(log n) for a balanced search tree?
+
 find, insert, delete, but not min, max, pred, succ
 find, insert, delete, min, max, but not pred, succ
 find, insert, delete, pred, succ but not min, max
 All of find, insert, delete, min, max, pred, succ
+
 Correct answer: (d) All of find, insert, delete, min, max, pred, succ.
-The only operations explained using the parent link were pred/succ, in the case where the node was a minimum/maximum node in its
-subtree. But we can find the appropriate ancestor by a second scan from root to this node by checking where the path takes the last
-right/left turn.
-1 point
+
+3)
 Consider the following algorithm to build a balanced search tree from a sorted sequence.
  Make the mid-point of the sequence the root of the tree
  Recursively construct balanced search trees from elements to the left and right of the midpoint and make these the left and right
 subtrees of the root.
 What is the complexity of this procedure where the sorted sequence is a sorted array?
+
 O(n)
 O(n log n)
 O(n2)
 Depends on the contents of the original sequence
+
 Correct answer: (a) O(n)
-The recursive construction has the recurrence T(n) = 2T(n/2) + O(1) since we can find the midpoint of an array in constant time.
-1 point
+
+
+4)
 Consider the following algorithm to build a balanced search tree from a sorted sequence.
  Make the mid-point of the sequence the root of the tree
  Recursively construct balanced search trees from elements to the left and right of the midpoint and make these the left and right
 subtrees of the root.
 What is the complexity of this procedure where the sorted sequence is a sorted list?
+
 O(n)
 O(n log n)
 O(n2)
 Depends on the contents of the original sequence.
+
 Correct answer: (b) O(n log n)
-The recursive construction has the recurrence T(n) = 2T(n/2) + O(n), like merge sort, since it takes time O(n) to find the midpoint in a
-list.
-1 point
+
+5)
 Which of the following is not a greedy algorithm?
+
 Dijkstra's algorithm for single source shortest paths
 Bellman-Ford algorithm for single source shortest paths
 Prim's algorithm for minimum cost spanning tree
 Kruskal's algorithm for minimum cost spanning tree
-Correct answer: (b) Bellman-Ford algorithm for single source shortest paths
-Bellman-Ford implicitly tests all possible paths of length upto n-1 from the source node to every other node, so it is not greedy.
+
+Correct answer: (b) Bellman-Ford algorithm for single source shortest path
+
+
 Week 7 Quiz Solutions
-The due date for submitting this assignment has passed.
-Due on 2017-03-13, 23:59 IST.
-Submitted assignment
-1 point
+
+
+1)
 We want to write down a recursive expression for Profit[i].
  Profit[N] = 0
  For 1 ≤ i < N, Profit[i] = ??
+
 max(Profit[i+1], Profit[i+2] + Price[i+1] - Price[i] - 2)
 max(Profit[i+2] + Price[i+1] - Price[i] - 2, Profit[i+3] + Price[i+2] - Price[i] - 2, ... Profit[N] + Price[n-1] - Price[i] - 2, Price[n] - Price[i] -
 2)
 max(Profit[i+1], Profit[i+2] + Price[i+1] - Price[i] - 2, Profit[i+3] + Price[i+2] - Price[i] - 2, ... Profit[N] + Price[n-1] - Price[i] - 2)
 max(Profit[i+1], Profit[i+2] + Price[i+1] - Price[i] - 2, Profit[i+3] + Price[i+2] - Price[i] - 2, ... Profit[N] + Price[n-1] - Price[i] - 2,
 Price[n] - Price[i] - 2)
+
 Correct answer: (d) max(Profit[i+1], Profit[i+2] + Price[i+1] - Price[i] - 2, Profit[i+3] + Price[i+2] - Price[i] - 2, ... Profit[N] +
 Price[n-1] - Price[i] - 2, Price[n] - Price[i] - 2)
-Consider all possibilities and take the maximum.
-1 point
+
+
+2)
 What is the size of the memo table for this problem?
+
 N
 N-1
 N+1
 N2
+
 Correct answer: (a) N
-One entry per day, N days.
-1 point
+
+
+3)
 What is a good order to compute the values of Profit[i] using dynamic programming?
+
 From Profit[1] to Profit[N]
 From Profit[N] to Profit[1]
 Either from Profit[1] to Profit[N] or from Profit[N] to Profit[1]
 None of these
+
 Correct answer: (b) From Profit[N] to Profit[1]
-Profit[i] depends on Profit[i+1],...,Profit[N] and Profit[N] is base case.
-1 point
+
+4)
 How much time will dynamic programming take to compute Profit[1]?
+
 O(N)
 O(N log N)
 O(N2)
 O(N2 log N)
+
 Correct answer: (c) O(N2)
-Profit[i] requires time O(N-i), so overall time is 1+2+...N-1
-1 point
+
+
+5)
 What is the value of Profit[1] in the example given in the problem statement?
+
 6
 7
 8
 9
+
 Correct answer: (c) 8
-Buy on day 2, sell on day 6, buy on day 7 sell on day 8
+
+
+
 Week 8 Quiz Solutions
-The due date for submitting this assignment has passed.
-Due on 2017-03-20, 23:59 IST.
-Submitted assignment
-1 point
+
+
+1)
 Which of the following is not a linear constraint?
+
 8x ≤ 3y + 25
 5x + 6xy ≤ 5
 9x ≥ 7y + 8z
 5y + 3x ≥ 33
+
 Correct answer: (b) 5x + 6xy ≤ 5
-In a non-linear constraint, we have two or more variables multiplied together.
-1 point
+
+
+2)
 When we model a graph problem using LP, mapping each path to a variable is not a good strategy because:
+
 Paths can be hard to compute.
 We have to be careful to avoid cycles.
 A graph has exponentially many paths.
 Edges may be directed.
+
 Correct answer: (c) A graph has exponentially many paths.
+
 Graphs have exponentially many paths, so the LP model will have exponentially many variables.
 1 point
 Suppose we compute the maximum s-t flow F in a network. Then, which of the following is true of s-t cuts?
@@ -505,6 +534,11 @@ Correct answer: (a) From F, we can identify a minimum s-t cut in polynomial time
 From F, use BFS to identify saturated edges that form a min-cut. There may be other min-cuts.
 1 point
 We have an exponential time algorithm for problem A, and problem A reduces in polynomial time to problem B. From this we can
+
+
+
+
+
 conclude that:
 B has an exponential time algorithm.
 B cannot have a polynomial time algorithm.
