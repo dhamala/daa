@@ -294,80 +294,87 @@ Correct Answer: (d) At most n-1 edges will be deleted.
 5)
 Suppose we have a graph with negative edge weights. We take the largest magnitude negative edge weight -k and reset each edge
 weight w to w+k+1. Which of the following is true?
+
 Kruskal's algorithm will identify the same spanning tree on the new graph as on the old graph.
 Minimum cost spanning trees in the original graph will not correspond to minimum cost spanning trees in the new graph.
 Prim's algorithm will not work on the original graph but will work on the modified graph.
 There are more minimum cost spanning trees in the modified graph than in the original graph.
+
 Correct Answer: (a) Kruskal's algorithm will identify the same spanning tree on the new graph as on the old graph.
-The ascending order of edge weights is unchanged if each edge weight is increased by k+1, so Kruskal's algorithm runs in exactly same
-way as before and produces the same tree. In general, since every spanning tree has exactly n-1 edges, the increase in weight
-uniformly affects all spanning trees, so the minimum cost spanning trees are unchanged. Prim's algorithm is not affected by negative
-weights.
+
+
+
 Week 5 Quiz Solutions
-The due date for submitting this assignment has passed.
-Due on 2017-02-27, 05:29 IST.
-Submitted assignment
-1 point
+
+
+1)
 Suppose we want to extend the union-find data structure to support the operation Reset(c), which takes as input the name of a
 component c and then breaks up c into singleton components, like MakeUnionFind(). For instance if c = 3 and c currently consists of
 {1,3,7}, then Reset(c) will produce three components called 1, 3 and 7 consisting of {1}, {3} and {7}, respectively.
 Which of the following is correct about the cost of adding Reset(c) to the array and pointer implementations of union-find discussed in
 the lecture?
+
 Array representation: O(n), Pointer representation: O(n)
 Array representation: O(size(c)), Pointer representation: O(n)
 Array representation: O(n), Pointer representation: O(size(c))
 Array representation: O(size(c)), Pointer representation: O(size(c))
+
 Correct Answer: (b) Array representation: O(size(c)), Pointer representation: O(n).
-In the array representation we have the list Members[c] which allows us to update the contents of c in time O(size(c)). In the pointer
-representation there is no easy way to identify all elements that belong to component c without scanning the entire set, so it takes time
-O(n).
-1 point
+
+2)
 Suppose we want to delete an arbitrary element from a max heap. (Assume we have auxiliary arrays NodeToHeap[] and HeapToNode[]
 required for the update() operation.)
 Consider the following strategies.
  Strategy 1: Remove the element from the array, compress the array and reheapify.
  Strategy 2: Update the value of this node to the current maximum value in the heap + 1, then delete_max.
+
 Strategy 1 takes time O(n log n) and Strategy 2 takes time O(n)
 Strategy 1 takes time O(n) and Strategy 2 takes time O(n log n)
 Strategy 1 takes time O(log n) and Strategy 2 takes time O(n)
 Strategy 1 takes time O(n) and Strategy 2 takes time O(log n)
+
 Correct Answer: (d) Strategy 1 takes time O(n) and Strategy 2 takes time O(log n).
-Compressing the array and heapify both take time O(n), so Strategy 1 takes time O(n). Look up the max value in a heap takes time
-O(1). Updating the node takes time O(log n), and so does delete_max(). So the second strategy takes time O(log n).
-1 point
+
+
+3)
+
 Suppose we want to support the operations predecessor and successor in a heap. Given a value v in the heap, pred(v) tells us the next
 smaller value currently in the heap and succ(v) tells us the next larger value currently in the heap.
+
 In both min heaps and max heaps, both operations take time O(n).
 In both min heaps and max heaps, both operations take time O(log n).
 In a min heap, pred(v) takes time O(log n) and succ(v) takes O(n) whereas in a max heap pred(v) takes time O(n) and succ(v)
 takes O(log n).
 In a min heap, pred(v) takes time O(n) and succ(v) takes O(log n) whereas in a max heap pred(v) takes time O(log n) and succ(v)
 takes O(n).
+
 Correct Answer: (a) In both min heaps and max heaps, both operations take time O(n).
-In either case, there is no obvious way to compute pred(v) and suc(v) without scanning all elements, so both cases take O(n).
-1 point
+
+4)
 Suppose we do merge sort with a three-way split: divide the array into 3 equal parts, sort each part and do a 3 way merge. What would
 the worst-case complexity of this version be?
+
 O(n2)
 O(n2 log3n)
 O(n log2n)
 O(n (log2n)2)
+
 Correct Answer: (c) O(n log2n).
-The recurrence will yield O(n log3 n), but log3 n = log2 n / log2 3 = O(log2 n).
-1 point
+
+5)
 In the closest pair of points problem, we have assumed that no two points have the same x or y coordinate. Which of the following steps
 would become more complicated to justify without this assumption.
+
 Constructing QY and RY from PY in time O(n) in the divide step.
 Constructing QX and RX from PX in time O(n) in the divide step.
 Constructing SY from QY and RY in time O(n) the combine step.
 Arguing that every d/2 side square in the d-band around the separator can have at most one point.
+
 Correct Answer: (a) Constructing QY and RY from PY in time O(n) in the divide step.
-All x-coordinates could be the same, in which case we may need O(n) time for each point in PY to assign it to QY or RY.
+
 Week 6 Quiz Solutions
-The due date for submitting this assignment has passed.
-Due on 2017-03-06, 05:29 IST.
-Submitted assignment
-1 point
+
+1)
 What is the complexity of inorder traversal for a binary search tree with n nodes?
 O(log n) whether the tree is balanced or unbalanced.
 O(log n) if the tree is balanced, O(n) otherwise.
